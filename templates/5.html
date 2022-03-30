@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h2>Works log</h2>
+    {% for i in lst_prf %}
+        <p>
+            <h2>Action {{ loop.index }}</h2>
+            <table>
+                <tr>
+                    <th class="table-secondary" id="title">Title of activity</th>
+                    <th class="table-secondary" id="tl">Team leader</th>
+                    <th class="table-secondary" id="duration">Duration</th>
+                    <th class="table-secondary" id="lst">List of collaborators</th>
+                    <th class="table-secondary" id="isfinished">Is finished</th>
+                </tr>
+                <tr>
+                    <td class="table-primary">{{ i[2] }}</td>
+                    <td class="table-primary">{{ i[1] }}</td>
+                    <td class="table-primary">{{ i[3] }}</td>
+                    <td class="table-primary">{{ i[4] }}</td>
+                    {% if i[7] == 'True' %}
+                        <td class="finished">Is finished</td>
+                    {% else %}
+                        <td class="notfinished">Is not finished</td>
+                    {% endif %}
+                </tr>
+            </table>
+        </p>
+    {% endfor %}
+{% endblock %}

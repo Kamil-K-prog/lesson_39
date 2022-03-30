@@ -1,0 +1,31 @@
+.finished {
+    background-color: #FFEEFF;
+    min-width: 70px;
+}
+
+.notfinished {
+    background-color: #AAFF93;
+    min-width: 70px;
+}
+
+.him {
+    color: #CFD2D7;
+    margin-left: 50px;
+}
+
+#title {
+   min-width: 400px;
+}
+
+#tl {
+    min-width: 150px;
+}
+
+#duration {
+    min-width: 100px;
+}
+
+#lst {
+    min-width: 180px;
+}
+
