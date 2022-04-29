@@ -4,7 +4,6 @@ from data.user import User
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'yandexlyceum_secret_key'
-app
 
 
 @app.route('/index')

@@ -14,7 +14,7 @@ def index():
     session = db_session.create_session()
     list_profession = session.query(Jobs).all()
     for i in list_profession:
-        res.append(str(i).split('//'))
+        res.append([i.id, i.team_leader, i.job, i.work_size, i.collaborators, i.start_date, i.end_date, i.is_finished])
     return render_template('5.html', title='Работы', lst_prf=res)
 
 
